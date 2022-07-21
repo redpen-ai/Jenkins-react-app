@@ -1,0 +1,73 @@
+{
+  "name": "react-shopping-cart",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@babel/core": "^7.16.10",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/register": "^7.16.9",
+    "@rpii/wdio-html-reporter": "^7.7.1",
+    "@rpii/wdio-html-reporter-pdf": "~7.0.0",
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "@wdio/cli": "^7.16.13",
+    "@wdio/types": "^7.8.0",
+    "axios": "^0.21.1",
+    "classnames": "^2.2.6",
+    "formik": "^2.2.6",
+    "jest-html-reporter": "^3.4.2",
+    "jest-junit": "^13.0.0",
+    "jest-stare": "^2.3.0",
+    "lodash.get": "^4.4.2",
+    "log4js": "^6.4.1",
+    "node-sass": "^5.0.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "4.0.3",
+    "react-select": "^4.3.0",
+    "start-server-and-test": "^1.14.0",
+    "styled-components": "^5.2.1",
+    "wdio-html-nice-reporter": "^7.9.1",
+    "wdio-timeline-reporter": "^5.1.4",
+    "yup": "^0.32.9"
+  },
+  "scripts": {
+    "start": "BROWSER=none react-scripts start",
+    "build": "react-scripts build",
+    "build-window": "CI=false react-scripts build",
+    "test": "react-scripts test  --watchAll=false --reporters='jest-stare' --testResultsProcessor='jest-stare'",
+    "test-window": "CI=true react-scripts test  --watchAll=false --reporters='jest-stare' --testResultsProcessor='jest-stare'",
+    "eject": "react-scripts eject",
+    "e2e": "start-server-and-test start http://localhost:3000 'wdio run wdio.conf.js'",
+    "e2e": "CI=true start-server-and-test start http://localhost:3000 'wdio run wdio.conf.js'",
+    "report": "node ./e2e/make-pdf.js"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@wdio/local-runner": "^7.16.13",
+    "@wdio/mocha-framework": "^7.16.13",
+    "@wdio/spec-reporter": "^7.16.13",
+    "chromedriver": "^96.0.0",
+    "wdio-chromedriver-service": "^7.2.6",
+    "wdio-json-reporter": "^3.0.0"
+  }
+}
