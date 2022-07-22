@@ -19,7 +19,6 @@ npm start
 
 Project will be automatically open at http://localhost.com:8015
 
-
 For production build:
 
 ```
@@ -30,6 +29,3 @@ For Run EndtoEnd test:
 ```
 npm run e2e
 ```
-
-
-Update
